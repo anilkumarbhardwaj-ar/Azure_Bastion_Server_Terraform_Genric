@@ -1,0 +1,2 @@
+variable "nic_map" { 
+}
