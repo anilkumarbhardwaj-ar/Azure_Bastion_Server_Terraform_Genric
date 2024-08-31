@@ -2,12 +2,12 @@
 rg-admin = {
 
   rg1 = {
-    name     = "pawan-rg"
+    name     = "Anil-rg"
     location = "Central India"
   }
 
   rg2 = {
-    name     = "ashish-rg"
+    name     = "Arati-rg"
     location = "west us"
   }
 
@@ -20,14 +20,14 @@ vnet-admin = {
   vnet1 = {
     name          = "vnet-dev"
     location      = "Central India"
-    rgname        = "pawan-rg"
+    rgname        = "Anil-rg"
     address_space = ["192.168.0.0/16"]
 
   }
   vnet2 = {
     name          = "vnet-prod"
     location      = "west us"
-    rgname        = "ashish-rg"
+    rgname        = "Arati-rg"
     address_space = ["10.0.0.0/16"]
 
   }
@@ -39,14 +39,14 @@ vnet-admin = {
 sub-admin = {
   sub1 = {
     name             = "sub-dev"
-    rgname           = "pawan-rg"
+    rgname           = "Anil-rg"
     vnet             = "vnet-dev"
     address_prefixes = ["192.168.0.0/29"]
   }
 
   sub2 = {
     name             = "sub-prod"
-    rgname           = "ashish-rg"
+    rgname           = "Arati-rg"
     vnet             = "vnet-prod"
     address_prefixes = ["10.0.0.0/29"]
   }
@@ -54,7 +54,7 @@ sub-admin = {
 
   sub3 = {
     name             = "AzureBastionSubnet"
-    rgname           = "ashish-rg"
+    rgname           = "Arati-rg"
     vnet             = "vnet-prod"
     address_prefixes = ["10.0.1.0/26"]
   }
@@ -66,7 +66,7 @@ nic-admin = {
   nic1 = {
     name     = "nic-dev"
     location = "Central India"
-    rgname   = "pawan-rg"
+    rgname   = "Anil-rg"
 
     # Subnet Data block values
     sname = "sub-dev"
@@ -83,7 +83,7 @@ nic-admin = {
   nic2 = {
     name     = "nic-prod"
     location = "West us"
-    rgname   = "ashish-rg"
+    rgname   = "Arati-rg"
 
     # Subnet Data block values
     sname = "sub-prod"
@@ -105,10 +105,10 @@ vm-admin = {
   vm1 = {
 
     name     = "frontend-vm"
-    rgname   = "pawan-rg"
+    rgname   = "Anil-rg"
     location = "Central India"
     size     = "Standard_F2"
-    username = "ashisdev"
+    username = "Aratidev"
     pass     = "Root@1234!!"
     nicname  = "nic-dev"
 
@@ -132,10 +132,10 @@ vm-admin = {
   vm2 = {
 
     name     = "backend-vm"
-    rgname   = "ashish-rg"
+    rgname   = "Arati-rg"
     location = "west us"
     size     = "Standard_F2"
-    username = "ashishprod"
+    username = "Anilprod"
     pass     = "Root@1234!!"
     nicname  = "nic-prod"
 
@@ -145,6 +145,7 @@ vm-admin = {
       caching  = "ReadWrite"
       sgacount = "Standard_LRS"
     }
+    
 
     # Nested Blocks for Network Interface Configuration
 
@@ -163,7 +164,7 @@ bastion-admin = {
   Bastin1 = {
     name                = "BastionServer"
     location            = "west us"
-    rgname              = "ashish-rg"
+    rgname              = "Arati-rg"
     # Public Data Block Values 
     pname = "pip-dev"
 
@@ -185,7 +186,7 @@ pip-admin = {
   pip1 = {
     name                = "pip-dev"
     location            = "west us"
-    resource_group_name = "ashish-rg"
+    resource_group_name = "Arati-rg"
     allocation_method   = "Static"
     sku                 = "Standard"
   }
